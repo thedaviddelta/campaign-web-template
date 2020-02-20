@@ -2,6 +2,7 @@ const bgContent = document.querySelector(".bg .content");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const arrow = document.querySelector(".header .arrow img");
+const changing = Array.from(document.querySelectorAll(".header .content .changing span"));
 
 bgContent.textContent = `${bgContent.textContent} `.repeat(3000);
 
@@ -28,3 +29,9 @@ tns({
     nav: false,
     controls: false
 });
+
+setInterval(() => {
+    const index = changing.findIndex(span => span.classList.contains("active"));
+    changing[index].classList.remove("active");
+    changing[index <= length ? index + 1 : 0].classList.add("active");
+}, 5000);

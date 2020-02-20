@@ -94,6 +94,15 @@ body {
     margin: 0 7.5vw;
 }
 
+.header .content .changing, .header .content .changing span.active {
+    display: inline !important;
+}
+
+.header .content .changing span {
+    display: none;
+    transition: 0.5s;
+}
+
 .header .arrow img {
     width: 1.66em;
     animation: jump 2.0s ease 0s infinite normal;
