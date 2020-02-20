@@ -33,5 +33,5 @@ tns({
 setInterval(() => {
     const index = changing.findIndex(span => span.classList.contains("active"));
     changing[index].classList.remove("active");
-    changing[index <= length ? index + 1 : 0].classList.add("active");
+    changing[index < changing.length - 1 ? index + 1 : 0].classList.add("active");
 }, 5000);
